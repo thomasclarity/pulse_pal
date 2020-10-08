@@ -29,13 +29,26 @@ Unofficial port of Pulse Pal for Python 3
 
 Features
 --------
+- Python 3 compatibility
+- Easy install
+- Command line interface (In progress)
+- Limited support
 
-* TODO
+Test your Pulse Pal connection
+------------------------------
 
-Credits
--------
+.. code-block:: python
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+    def test_pulse_pal(serialPortName='COM10'):
+        import serial,struct
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        OpMenuByte = 213
+        serialObject = serial.Serial(serialPortName, 115200, timeout=1)
+        handshakeByteString = struct.pack('BB', OpMenuByte, 72)
+        serialObject.write(handshakeByteString)
+        Response=serialObject.read(5)
+        print(len(Response))
+
+    test_pulse_pal('COM10')
+
+
