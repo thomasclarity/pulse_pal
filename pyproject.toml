@@ -43,5 +43,5 @@ yapf = "*"
 pulse_pal = 'pulse_pal.cli:main'
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry>=0.12", "pyserial"]
 build-backend = "poetry.masonry.api"
