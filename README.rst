@@ -30,9 +30,15 @@ Unofficial port of Pulse Pal for Python 3
 Features
 --------
 - Python 3 compatibility
-- Easy install
+- Easy install through pip
 - Command line interface (In progress)
 - Limited support
+
+Installation
+------------
+.. code-block:: bash
+
+   pip install pulse_pal
 
 Test your Pulse Pal connection
 ------------------------------

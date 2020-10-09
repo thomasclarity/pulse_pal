@@ -63,6 +63,7 @@ class PulsePalObject(object):
         handshakeByteString = struct.pack('BB', self.OpMenuByte, 72)
         self.serialObject.write(handshakeByteString)
         Response = self.serialObject.read(5)
+        assert len(Response) > 0, f'No PulsePal found on {serialPortName}! Make sure PulsePal is connected'
         fvBytes = Response[1:5]
         self.firmwareVersion = struct.unpack('<I', fvBytes)[0]
         if self.firmwareVersion < 20:
