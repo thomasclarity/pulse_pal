@@ -27,7 +27,7 @@ Features
 --------
 - Python 3 compatibility
 - Easy install through pip
-- Command line interface (In progress)
+- Command-line interface
 - Limited support
 
 Installation
@@ -38,6 +38,19 @@ Installation
 
 Usage
 -----
+Through python
+^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+    from pulse_pal.pulse_pal import PulsePalObject  # Import PulsePalObject
+    myPulsePal = PulsePalObject()  # Create a new instance of a PulsePal object
+    myPulsePal.connect(serialPortName='COM10')  # Connect to PulsePal on port COM# (
+
+
+Through console
+^^^^^^^^^^^^^^^^
+
 See help:
 
 .. code-block:: bash
@@ -57,14 +70,15 @@ Trigger channel 1:
    pulse_pal --do trigger --channel 1
 
 
-Test your Pulse Pal connection
-------------------------------
+- Test your Pulse Pal connection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Easy (from console):
 
 .. code-block:: bash
 
    pulse_pal --do test
+
 
 - Low-level (from python):
 

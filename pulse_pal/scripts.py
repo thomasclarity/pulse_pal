@@ -4,7 +4,7 @@ import time
 def photometry_pulses(acquisition_freq, stim_duration=1*30):
     myPulsePal = PulsePalObject()  # Create a new instance of a PulsePal object
     myPulsePal.connect(serialPortName='COM10')  # Connect to PulsePal on port COM# (
-    assert acquisition_freq in [20, 40], NotImplemented('asdf')
+    assert acquisition_freq in [20, 40], NotImplemented(f'Frequency {acquisition_freq} is not implemented')
     if acquisition_freq == 40:
         photo_up_time = 0.017
         photo_down_time = 0.008
