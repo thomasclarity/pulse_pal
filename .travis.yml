@@ -6,7 +6,7 @@ python:
 install: pip install -U tox-travis
 script: tox
 deploy:
-  cleanup: true
+  cleanup: false
   provider: pypi
   distributions: sdist bdist_wheel
   user: mmyros
