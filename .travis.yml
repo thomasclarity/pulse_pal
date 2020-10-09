@@ -4,14 +4,14 @@ python:
 - 3.6
 install: pip install -U tox-travis
 script: tox
-deploy:
-  cleanup: false
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: mmyros
-  password:
-    secure: dRmambSsSC0w24wMem8/RRXre6Ce6amAhyilCi+oe9vgJMZiL562jVj19YAWswXQAtKLsMM21b4ps1iribqkUKqy0yqmI+h440P7EiWs7abapsuAYA0VrA6zZXgltXwvAJfyUoktULKWsXSGJ76TkwamucBlUCMpi+rNZ4ZTKc51DLBjZm8fMBqMEpaDTzsfR68oTziQtXRpU8IpkFIwR0K79VkDGUiLW1O+RpCQf93Ta1NkIfcMm8k7d+Fcc6SkrCccLzy7IOcknnG41DGkkZsf4hridRaRG4dTg3Of3/NwBL33BBlgmpRAHuRL3a/pYqgChVuxZyan8pdMkgpxWvCkpknRZGTAySXwesjGIUE3iBaZJek0xXkOV//WGWgPplLTi12O9kg1hmpjTZGfAqWD+3S9m18cCCbFxchw7rCI91DIIQrFW4B2cC/x5Jp+D0CA3i3Vwg1xkZqAWFOKh6mbvIQnIUCsTlinywQiCF3YDeyxK2/sGdpXYOG+KZbjbOcEGvpwrFkV5sOKalbqJq/d3kBBhtxSHmkqP/sZeaDCPD9a9lyOJ8kxEHxCzx+OjIr0MonjhcyBX24AoYleBQBlBGWtLgZtDJ0vTbEh5NBVi62S/MMm7GD0xRBkX8EvbghNowfhOfC4+jJdk/4BPmxIru3KzMB13CQTiFbuzKE=
-  on:
-    tags: true
-    repo: mmyros/pulse_pal
-    python: 3.6
+#deploy:
+#  cleanup: true
+#  provider: pypi
+#  distributions: sdist bdist_wheel
+#  user: mmyros
+#  password:
+#    secure: dRmambSsSC0w24wMem8/RRXre6Ce6amAhyilCi+oe9vgJMZiL562jVj19YAWswXQAtKLsMM21b4ps1iribqkUKqy0yqmI+h440P7EiWs7abapsuAYA0VrA6zZXgltXwvAJfyUoktULKWsXSGJ76TkwamucBlUCMpi+rNZ4ZTKc51DLBjZm8fMBqMEpaDTzsfR68oTziQtXRpU8IpkFIwR0K79VkDGUiLW1O+RpCQf93Ta1NkIfcMm8k7d+Fcc6SkrCccLzy7IOcknnG41DGkkZsf4hridRaRG4dTg3Of3/NwBL33BBlgmpRAHuRL3a/pYqgChVuxZyan8pdMkgpxWvCkpknRZGTAySXwesjGIUE3iBaZJek0xXkOV//WGWgPplLTi12O9kg1hmpjTZGfAqWD+3S9m18cCCbFxchw7rCI91DIIQrFW4B2cC/x5Jp+D0CA3i3Vwg1xkZqAWFOKh6mbvIQnIUCsTlinywQiCF3YDeyxK2/sGdpXYOG+KZbjbOcEGvpwrFkV5sOKalbqJq/d3kBBhtxSHmkqP/sZeaDCPD9a9lyOJ8kxEHxCzx+OjIr0MonjhcyBX24AoYleBQBlBGWtLgZtDJ0vTbEh5NBVi62S/MMm7GD0xRBkX8EvbghNowfhOfC4+jJdk/4BPmxIru3KzMB13CQTiFbuzKE=
+#  on:
+#    tags: true
+#    repo: mmyros/pulse_pal
+#    python: 3.6
