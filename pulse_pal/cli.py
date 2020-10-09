@@ -16,12 +16,12 @@ def test_pulse_pal(serialPortName='COM10'):
 
 
 @click.command()
-@click.option('--do', default='test', help='test or set')
+@click.option('--do', default='test', help='test or set or trigger')
 @click.option('--port', default='COM1')
 @click.option('--param_name')
-@click.option('--channel')
+@click.option('--channel', default=1)
 @click.option('--param_value')
-def main(do='test', port='COM1', param_name=None, channel=None, param_value=None):
+def main(do='test', port='COM1', param_name=None, channel=1, param_value=None):
     """Console script for pulse_pal."""
     if do == 'test':
         test_pulse_pal(serialPortName=port)
@@ -31,6 +31,11 @@ def main(do='test', port='COM1', param_name=None, channel=None, param_value=None
                                                            paramName=param_name,
                                                            channel=channel,
                                                            value=param_value)
+    elif do == 'trigger':
+        obj = pulse_pal.PulsePalObject.connect(serialPortName=port)
+        chans = [0,0,0,0]
+        chans[channel] = 1
+        obj.triggerOutputChannels(*chans)
     return 0
 
 

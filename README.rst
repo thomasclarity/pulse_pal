@@ -14,10 +14,6 @@ Pulse Pal for Python 3
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/mmyros/pulse_pal/shield.svg
-     :target: https://pyup.io/repos/github/mmyros/pulse_pal/
-     :alt: Updates
-
 
 
 Unofficial port of Pulse Pal for Python 3
@@ -40,8 +36,37 @@ Installation
 
    pip install pulse_pal
 
+Usage
+-----
+See help:
+
+.. code-block:: bash
+
+   pulse_pal --help
+
+Set phase 1 voltage to 5:
+
+.. code-block:: bash
+
+   pulse_pal --do set --port COM2 --param_name phase1Voltage --param_value 5
+
+Trigger channel 1:
+
+.. code-block:: bash
+
+   pulse_pal --do trigger --channel 1
+
+
 Test your Pulse Pal connection
 ------------------------------
+
+- Easy (from console):
+
+.. code-block:: bash
+
+   pulse_pal --do test
+
+- Low-level (from python):
 
 .. code-block:: python
 
