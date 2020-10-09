@@ -14,4 +14,4 @@ deploy:
   on:
     tags: true
     repo: mmyros/pulse_pal
-    python: 3.7
+    python: 3.6
