@@ -4,15 +4,15 @@ Usage
 
 To use Pulse Pal for Python 3 in a project::
 
-    from pulse_pal.pulse_pal import PulsePalObject
+    from pulse_pal.pulse_pal import PulsePal
 
 Through python
 --------------
 
 .. code-block:: python
 
-    from pulse_pal.pulse_pal import PulsePalObject  # Import PulsePalObject
-    myPulsePal = PulsePalObject()  # Create a new instance of a PulsePal object
+    from pulse_pal import PulsePal
+    myPulsePal = PulsePal()  # Create a new instance of a PulsePal object
     myPulsePal.connect(serialPortName='COM10')  # Connect to PulsePal on port COM# (
 
 
@@ -65,3 +65,4 @@ Trigger channel 1:
     test_pulse_pal('COM10')
 
 
+See more examples in scripts.py

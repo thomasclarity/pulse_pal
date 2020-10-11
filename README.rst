@@ -43,8 +43,8 @@ Through python
 
 .. code-block:: python
 
-    from pulse_pal.pulse_pal import PulsePalObject  # Import PulsePalObject
-    myPulsePal = PulsePalObject()  # Create a new instance of a PulsePal object
+    from pulse_pal import PulsePal
+    myPulsePal = PulsePal()  # Create a new instance of a PulsePal object
     myPulsePal.connect(serialPortName='COM10')  # Connect to PulsePal on port COM# (
 
 
@@ -70,8 +70,8 @@ Trigger channel 1:
    pulse_pal --do trigger --channel 1
 
 
-- Test your Pulse Pal connection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Test your Pulse Pal connection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Easy (from console):
 
@@ -97,3 +97,4 @@ Trigger channel 1:
     test_pulse_pal('COM10')
 
 
+See more examples in scripts.py
